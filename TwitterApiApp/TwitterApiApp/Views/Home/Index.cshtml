@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        <p class="lead">This project is a coding exercise using Twitter API.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Authenticate a User with Twitter</h2>
+        <p>
+            This process uses 2 steps that can be found on the HomeController. The methods are <b>TwitterAuth</b> and <b>ValidateTwitterAuth</b>.
+        </p>
+        <p>
+            <a class="btn btn-default" href="/Home/TwitterAuth">TwitterAuth</a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Tweet</h2>
+        <p>Send tweets</p>
+        <a class="btn btn-default" href="/Tweet">Tweet</a>
+    </div>
+</div>
+
+<!-- More Goodness Coming -->
+@*<div ng-controller="indexController">
+    <h3>
+        <ng-pluralize count="tweets.length" when="newTweets"></ng-pluralize>
+    </h3>
+    <table class="table table-striped">
+        <tr ng-repeat="item in tweets">
+            <td>
+                <img src="{{item.ImageUrl}}" />
+            </td>
+            <td>
+                <strong>{{item.ScreenName}}</strong> <br />
+                {{item.Tweet}}
+            </td>
+        </tr>
+    </table>
+</div>*@ 
+
+@*<br>
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch Twitter
+</button>*@
+
+<!-- Modal -->
+@*<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>*@
