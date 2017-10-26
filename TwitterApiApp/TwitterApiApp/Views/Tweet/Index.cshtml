@@ -1,9 +1,13 @@
 ﻿<h2>Publish Tweet</h2>
 
-<form name="tweetForm" action="" method="post" enctype="multipart/form-data">
+<form name="tweetForm" ng-app="tweetApp" ng-controller="tweetController" novalidate method="post" enctype="multipart/form-data">
     <div class="form-group">
         <label for="tweet">Tweet : </label>
-        <input type="text" class="form-control" name="tweet" id="tweet" value="" ng-minlength="1" ng-maxlength="140" />
+        <input type="text" placeholder="What's happening?" name="tweet" ng-model="tweet" ng-maxlength="140" class="form-control" required />
+        <span style="color:red" ng-show="tweetForm.tweet.$dirty && tweetForm.tweet.$invalid">
+            <span ng-show="tweetForm.tweet.errror.required">Enter a message</span>
+            <span ng-show="tweetForm.tweet.error.maxlength">Must be equal to and less than 140 characters</span>
+        </span>
     </div>
 
     @*<div class="form-group">
@@ -19,6 +23,13 @@
     </div>*@
 
     <div class="form-group">
-        <input type="submit" class="btn btn-success" />
+        <input type="submit" class="btn btn-primary" value="Tweet" />
     </div>
 </form>
+
+<script>
+    var app = angular.module('tweetApp', []);
+    app.controller('tweetController', function ($scope) {
+    
+    });
+</script>
